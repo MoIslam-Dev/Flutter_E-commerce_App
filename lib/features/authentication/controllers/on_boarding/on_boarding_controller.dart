@@ -1,5 +1,6 @@
 
 
+import 'package:e_commerceapp/features/authentication/screens/login/login.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -20,7 +21,7 @@ void DotNavigationClick( index ){
 
   void nextPage() {
     if (currentPageIndex.value == 2) {
-   //   Get.to(() => const LoginScreen());
+     Get.offAll(() => const LoginScreen());
     } else {
       int page = currentPageIndex.value + 1;
       pageController.animateToPage(
