@@ -1,6 +1,9 @@
+import 'package:e_commerceapp/features/authentication/screens/password_forget_reset/forget_password.dart';
+import 'package:e_commerceapp/features/authentication/screens/signup/signup.dart';
 import 'package:e_commerceapp/utils/constants/sizes.dart';
 import 'package:e_commerceapp/utils/constants/text_string.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 
 class ELoginForm extends StatelessWidget {
@@ -41,7 +44,7 @@ class ELoginForm extends StatelessWidget {
                 ),
                 TextButton(
                   onPressed: () {
-          //          Get.to(() => const ForgetPasswordScreen());
+              Get.to(() => const ForgetPasswordScreen());
                   },
                   child: const Text(
                     ETexts.forgetPassword,
@@ -63,7 +66,7 @@ class ELoginForm extends StatelessWidget {
             const SizedBox(height: ESizes.spaceBtwItems),
             OutlinedButton(
               onPressed: () {
-                //Get.to(() => const SignupScreen());
+                Get.to(() => const SignupScreen());
               },
               child: const Center(
                 child: Text(

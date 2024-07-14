@@ -7,8 +7,8 @@ ETexts._();
   static const String skip = "Skip";
   static const String done = "Done";
   static const String submit = "Submit";
-  static const String appName = "T-Store";
-  static const String tContinue = "Continue";
+  static const String appName = "Akram-Store";
+  static const String eContinue = "Continue";
 
 
   // -- OnBoarding Texts

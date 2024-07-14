@@ -23,7 +23,7 @@ class EAppBarTheme {
     scrolledUnderElevation: 0,
     backgroundColor: Colors.transparent,
     surfaceTintColor: Colors.transparent,
-    iconTheme: IconThemeData(color: EColors.black, size: ESizes.iconMd),
+    iconTheme: IconThemeData(color: EColors.white, size: ESizes.iconMd),
     actionsIconTheme: IconThemeData(color: EColors.white, size: ESizes.iconMd),
     titleTextStyle: TextStyle(
         fontSize: 18.0, fontWeight: FontWeight.w600, color: EColors.white),
