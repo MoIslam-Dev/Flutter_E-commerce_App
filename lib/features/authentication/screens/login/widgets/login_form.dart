@@ -1,3 +1,4 @@
+import 'package:e_commerceapp/features/authentication/screens/bottom_navigation_bar/navigation_menu.dart';
 import 'package:e_commerceapp/features/authentication/screens/password_forget_reset/forget_password.dart';
 import 'package:e_commerceapp/features/authentication/screens/signup/signup.dart';
 import 'package:e_commerceapp/utils/constants/sizes.dart';
@@ -55,7 +56,7 @@ class ELoginForm extends StatelessWidget {
             const SizedBox(height: ESizes.spaceBtwSections),
             ElevatedButton(
               onPressed: () {
-     //           Get.to(() => const NavigationMenu());
+             Get.to(() => const NavigationMenu());
               },
               child: const Center(
                 child: Text(
