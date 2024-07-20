@@ -5,7 +5,6 @@ import 'package:e_commerceapp/common/widgets/custome_shaps/custome_containers/ci
 import 'package:e_commerceapp/common/widgets/images/E_rounded_image.dart';
 import 'package:e_commerceapp/features/shop/controllers/home_controller.dart';
 import 'package:e_commerceapp/utils/constants/colors.dart';
-import 'package:e_commerceapp/utils/constants/image_strings.dart';
 import 'package:e_commerceapp/utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
