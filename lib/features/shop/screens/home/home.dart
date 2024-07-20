@@ -3,7 +3,10 @@ import 'package:e_commerceapp/common/widgets/custome_shaps/custome_containers/se
 import 'package:e_commerceapp/common/widgets/texts/section_heading.dart';
 import 'package:e_commerceapp/features/shop/screens/home/widgets/home_appbar.dart';
 import 'package:e_commerceapp/features/shop/screens/home/widgets/home_categories_list.dart';
+import 'package:e_commerceapp/features/shop/screens/home/widgets/home_promo_slider.dart';
 import 'package:e_commerceapp/utils/constants/colors.dart';
+import 'package:e_commerceapp/utils/constants/image_strings.dart';
+
 import 'package:e_commerceapp/utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
@@ -13,7 +16,7 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
+    return const Scaffold(
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -58,6 +61,33 @@ class HomeScreen extends StatelessWidget {
                       ],
                     ),
                   )
+                ],
+              ),
+            ),
+            //body part in the home page
+            Padding(
+                padding: EdgeInsets.all(ESizes.defaultSpace),
+                child: PromoSlider(
+                  banners: [
+                    EImages.promoBanner1,
+                    EImages.promoBanner2,
+                    EImages.promoBanner3,
+                  ],
+                )),
+            SizedBox(
+              height: ESizes.spaceBtwSections,
+            ),
+
+            //Product sextion
+            Padding(
+              padding: EdgeInsets.only(left: ESizes.defaultSpace),
+              child: Column(
+                children: [
+                  SectionHeading(
+                      headingText: 'Popular Products ',
+                      buttonText: 'view all'),
+                      SizedBox(height: ESizes.spaceBtwItems,),
+                      //product card
                 ],
               ),
             )
