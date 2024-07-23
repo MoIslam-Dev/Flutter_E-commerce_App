@@ -33,7 +33,7 @@ class HomeAppbar extends StatelessWidget {
         ],
       ),
       actions: [
-        ECartCounterIcon(onPressed: (){},iconcolor: EColors.white,)
+        ECartCounterIcon(onPressed: (){},)
       ],
     );
   }

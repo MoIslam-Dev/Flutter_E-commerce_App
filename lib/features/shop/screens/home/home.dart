@@ -49,9 +49,8 @@ class HomeScreen extends StatelessWidget {
                   child: Column(
                     children: [
                       SectionHeading(
-                        headingText: 'Populaire Categories',
-                        showTextButton: false,
-                        buttonText: 'hello',
+                        title: 'Populaire Categories',
+                        showActionButton: false,
                         textColor: EColors.white,
                       ),
 
@@ -69,31 +68,27 @@ class HomeScreen extends StatelessWidget {
           //body part in the home page
           Padding(
               padding: EdgeInsets.all(ESizes.defaultSpace),
-              child: PromoSlider(
-                banners: [
-                  EImages.promoBanner1,
-                  EImages.promoBanner2,
-                  EImages.promoBanner3,
+              child: Column(
+                children: [
+                  PromoSlider(
+                    banners: [
+                      EImages.promoBanner1,
+                      EImages.promoBanner2,
+                      EImages.promoBanner3,
+                    ],
+                  ),
+                  //Product section
+                  SectionHeading(
+                    title: 'Popular Products ',
+                  ),
+                  SizedBox(
+                    height: ESizes.spaceBtwItems,
+                  ),
+                  EGridLayout(
+                      itemCount: 8,
+                      itemBuilder: (_, index) => EProductCardVertical())
                 ],
               )),
-          SizedBox(
-            height: ESizes.spaceBtwSections,
-          ),
-
-          //Product section
-          Padding(
-            padding: EdgeInsets.all( ESizes.defaultSpace),
-            child: Column(children: [
-              SectionHeading(
-                  headingText: 'Popular Products ', buttonText: 'view all'),
-              SizedBox(
-                height: ESizes.spaceBtwItems,
-              ),
-              EGridLayout(itemCount: 8, itemBuilder: (_,index)=>EProductCardVertical())
-              //product card
-             
-            ]),
-          )
         ],
       ),
     ));

@@ -2,6 +2,7 @@ import 'package:e_commerceapp/common/styles/shadow.dart';
 import 'package:e_commerceapp/common/widgets/custome_shaps/custome_containers/rounded_container.dart';
 import 'package:e_commerceapp/common/widgets/icons/circulaire_icon.dart';
 import 'package:e_commerceapp/common/widgets/images/E_rounded_image.dart';
+import 'package:e_commerceapp/common/widgets/texts/brand_title_text_with_verification_icon.dart';
 import 'package:e_commerceapp/common/widgets/texts/product_price.dart';
 import 'package:e_commerceapp/common/widgets/texts/product_title.dart';
 import 'package:e_commerceapp/utils/constants/colors.dart';
@@ -24,7 +25,7 @@ class EProductCardVertical extends StatelessWidget {
         decoration: BoxDecoration(
             boxShadow: [EShadowStyle.verticalProductShadow],
             borderRadius: BorderRadius.circular(ESizes.productImageRadius),
-            color: dark ? EColors.grey : EColors.white),
+            color: dark ? EColors.darkGrey : EColors.white),
         child: Column(children: [
           ERoundedContainer(
             height: 180,
@@ -76,50 +77,44 @@ class EProductCardVertical extends StatelessWidget {
                 ),
                 SizedBox(height: ESizes.spaceBtwItems / 2),
                 Row(
-                  children: [
-                    Text('NIKE',
-                        style: Theme.of(context).textTheme.labelMedium),
-                    SizedBox(width: ESizes.xs),
-                    Icon(
-                      Iconsax.verify5,
-                      color: EColors.primary,
-                      size: ESizes.iconXs,
-                    )
-                  ],
+                  children: [EBrandTitleTextWithVerifiedIcon(title: 'Nike')],
                 ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    //price
-                    EProductPriceText(
-                      price: '29000.99',
-                    ),
-                    //Add To Cart Button
-                    Container(
-                      decoration: BoxDecoration(
-                        color: EColors.dark,
-                        borderRadius: BorderRadius.only(
-                          topLeft: Radius.circular(ESizes.cardRadiusMd),
-                          bottomRight:
-                              Radius.circular(ESizes.productImageRadius),
-                        ),
-                      ),
-                      child: SizedBox(
-                        height: ESizes.iconLg * 1.2,
-                        width: ESizes.iconLg * 1.2,
-                        child: Center(
-                          child: Icon(
-                            Iconsax.add,
-                            color: EColors.white,
-                          ),
-                        ),
-                      ),
-                    )
-                  ],
-                )
               ],
             ),
-          )
+          ),
+          Spacer(),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              //price
+              Padding(
+                padding: const EdgeInsets.only(left: ESizes.sm),
+                child: EProductPriceText(
+                  price: '29000.99',
+                ),
+              ),
+              //Add To Cart Button
+              Container(
+                decoration: BoxDecoration(
+                  color: EColors.dark,
+                  borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(ESizes.cardRadiusMd),
+                    bottomRight: Radius.circular(ESizes.productImageRadius),
+                  ),
+                ),
+                child: SizedBox(
+                  height: ESizes.iconLg * 1.2,
+                  width: ESizes.iconLg * 1.2,
+                  child: Center(
+                    child: Icon(
+                      Iconsax.add,
+                      color: EColors.white,
+                    ),
+                  ),
+                ),
+              )
+            ],
+          ),
         ]),
       ),
     );
