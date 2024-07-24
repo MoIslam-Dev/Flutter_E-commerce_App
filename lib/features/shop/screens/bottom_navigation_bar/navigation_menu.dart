@@ -1,5 +1,6 @@
 import 'package:e_commerceapp/features/shop/screens/home/home.dart';
 import 'package:e_commerceapp/features/shop/screens/store/store.dart';
+import 'package:e_commerceapp/features/shop/screens/wishlist/wishlist.dart';
 import 'package:e_commerceapp/utils/constants/colors.dart';
 import 'package:e_commerceapp/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
@@ -20,10 +21,10 @@ class NavigationMenu extends StatelessWidget {
           selectedIndex: controller.selectedIndex.value,
           onDestinationSelected: (index) =>
               controller.selectedIndex.value = index,
-              backgroundColor: dark?EColors.black:EColors.white,
-              indicatorColor: dark?EColors.white.withOpacity(0.1):EColors.black.withOpacity(0.1),
-
-
+          backgroundColor: dark ? EColors.black : EColors.white,
+          indicatorColor: dark
+              ? EColors.white.withOpacity(0.1)
+              : EColors.black.withOpacity(0.1),
           destinations: [
             NavigationDestination(icon: Icon(Iconsax.home), label: 'Home'),
             NavigationDestination(icon: Icon(Iconsax.shop), label: 'Store'),
@@ -32,7 +33,7 @@ class NavigationMenu extends StatelessWidget {
           ],
         ),
       ),
-      body: Obx(()=> controller.screens[controller.selectedIndex.value]),
+      body: Obx(() => controller.screens[controller.selectedIndex.value]),
     );
   }
 }
@@ -41,12 +42,9 @@ class NavigationController extends GetxController {
   final Rx<int> selectedIndex = 0.obs;
 
   final screens = [
-  HomeScreen(),
-      StoreScreen(),
-    
-    Container(
-      color: Colors.cyanAccent,
-    ),
+    HomeScreen(),
+    StoreScreen(),
+    WishlistScreen(),
     Container(
       color: Colors.limeAccent,
     )

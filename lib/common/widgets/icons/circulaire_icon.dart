@@ -1,9 +1,7 @@
-
 import 'package:e_commerceapp/utils/constants/colors.dart';
 import 'package:e_commerceapp/utils/constants/sizes.dart';
 import 'package:e_commerceapp/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
-
 
 class CircularIcon extends StatelessWidget {
   final double? width, height, size;
