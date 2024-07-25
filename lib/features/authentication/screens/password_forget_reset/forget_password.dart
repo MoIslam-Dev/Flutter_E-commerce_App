@@ -14,7 +14,7 @@ class ForgetPasswordScreen extends StatelessWidget {
       appBar: AppBar(),
       body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.all(ESizes.defaultSpace),
+          padding: const EdgeInsets.all(ESizes.defaultSpace),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -32,7 +32,7 @@ class ForgetPasswordScreen extends StatelessWidget {
                 style: Theme.of(context).textTheme.labelMedium,
                
               ),
-                SizedBox(
+                const SizedBox(
                 height: ESizes.spaceBtwSections,
               ),
               //textfeild
@@ -47,7 +47,7 @@ class ForgetPasswordScreen extends StatelessWidget {
               //submit button
               SizedBox(
                 width: double.infinity,
-                child: ElevatedButton(onPressed: ()=>{Get.to(ResetPasswordScreen())}, child: Text(
+                child: ElevatedButton(onPressed: ()=>{Get.to(const ResetPasswordScreen())}, child: const Text(
                   ETexts.submit,
                 )),
               )

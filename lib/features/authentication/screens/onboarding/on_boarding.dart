@@ -21,7 +21,7 @@ class OnboardingScreen extends StatelessWidget {
           PageView(
             controller: controller.pageController,
             onPageChanged: controller.UpdatePageIndicator,
-            children: [
+            children: const [
               OnBoardingPage(image:  EImages.onBoardingImage1,title:  ETexts.onBoardingTitle1,subtitle:  ETexts.onBoardingSubTitle1),
              OnBoardingPage(image:  EImages.onBoardingImage2,title:  ETexts.onBoardingTitle2,subtitle:  ETexts.onBoardingSubTitle2),
              OnBoardingPage(image:  EImages.onBoardingImage3,title:  ETexts.onBoardingTitle3,subtitle:  ETexts.onBoardingSubTitle3),

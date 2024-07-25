@@ -15,35 +15,35 @@ class CategoryTab extends StatelessWidget {
   Widget build(BuildContext context) {
     return  ListView(
       shrinkWrap: true,
-      physics: NeverScrollableScrollPhysics(),
+      physics: const NeverScrollableScrollPhysics(),
       children:[
          Padding(
-        padding: EdgeInsets.all(ESizes.defaultSpace),
+        padding: const EdgeInsets.all(ESizes.defaultSpace),
         child: Column(
           //brands
           children: [
-            BrandShowCase(
+            const BrandShowCase(
               images: [
                 EImages.productImage1,
                 EImages.productImage2,
                 EImages.productImage3,
               ],
             ),
-                   BrandShowCase(
+                   const BrandShowCase(
               images: [
                 EImages.productImage1,
                 EImages.productImage2,
                 EImages.productImage3,
               ],
             ),
-              SizedBox(height: ESizes.spaceBtwItems),
+              const SizedBox(height: ESizes.spaceBtwItems),
             //products
-            SectionHeading(title: 'You may like'),
-            SizedBox(height: ESizes.spaceBtwItems),
+            const SectionHeading(title: 'You may like'),
+            const SizedBox(height: ESizes.spaceBtwItems),
       
             EGridLayout(
-                itemCount: 4, itemBuilder: (_, index) => EProductCardVertical()),
-                SizedBox(height: ESizes.spaceBtwSections),
+                itemCount: 4, itemBuilder: (_, index) => const EProductCardVertical()),
+                const SizedBox(height: ESizes.spaceBtwSections),
           ],
         ),
       ),

@@ -21,25 +21,25 @@ final VoidCallback onPressed;
               //Image
               Image(image: AssetImage(image),width: EHelperFunctions.screenWidth() *0.6,),
 
-              SizedBox(height: ESizes.spaceBtwSections,),
+              const SizedBox(height: ESizes.spaceBtwSections,),
               // title and subtitle 
               Text(
                 title,
                 style: Theme.of(context).textTheme.headlineMedium,
                 textAlign: TextAlign.center,
               ),
-              SizedBox(height: ESizes.spaceBtwItems,),
+              const SizedBox(height: ESizes.spaceBtwItems,),
             Text(
                 subtitle,
                 style: Theme.of(context).textTheme.labelMedium,
                   textAlign: TextAlign.center,
               ),
-               SizedBox(height: ESizes.spaceBtwSections,),
+               const SizedBox(height: ESizes.spaceBtwSections,),
 
                //button
                   SizedBox(
                 width: double.infinity,
-                child: ElevatedButton(onPressed: onPressed, child: Text(
+                child: ElevatedButton(onPressed: onPressed, child: const Text(
                   ETexts.eContinue
                 )),
               ),

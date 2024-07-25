@@ -25,7 +25,7 @@ class SignupForm extends StatelessWidget {
                       prefixIcon: Icon(Iconsax.user)),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 width: ESizes.spaceBtwInputFields,
               ),
               Expanded(
@@ -39,7 +39,7 @@ class SignupForm extends StatelessWidget {
               )
             ],
           ),
-          SizedBox(
+          const SizedBox(
             height: ESizes.spaceBtwInputFields,
           ),
           //UserName
@@ -50,7 +50,7 @@ class SignupForm extends StatelessWidget {
               prefixIcon: Icon(Iconsax.user),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: ESizes.spaceBtwInputFields,
           ),
           //Email
@@ -61,7 +61,7 @@ class SignupForm extends StatelessWidget {
               prefixIcon: Icon(Iconsax.direct),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: ESizes.spaceBtwInputFields,
           ),
           //phone
@@ -72,7 +72,7 @@ class SignupForm extends StatelessWidget {
               prefixIcon: Icon(Iconsax.call),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: ESizes.spaceBtwInputFields,
           ),
           //password
@@ -83,13 +83,13 @@ class SignupForm extends StatelessWidget {
                 prefixIcon: Icon(Iconsax.password_check),
                 suffixIcon: Icon(Iconsax.eye_slash)),
           ),
-          SizedBox(
+          const SizedBox(
             height: ESizes.spaceBtwSections,
           ),
 
           //tERM cONDITION cHECKBOX
-          ETerm_Conditions(),
-          SizedBox(
+          const ETerm_Conditions(),
+          const SizedBox(
             height: ESizes.spaceBtwSections,
           ),
           //create account button
@@ -97,14 +97,14 @@ class SignupForm extends StatelessWidget {
             width: double.infinity,
             child: ElevatedButton(
               onPressed: () {
-                Get.to(VerifyEmailScreen());
+                Get.to(const VerifyEmailScreen());
               },
-              child: Text(
+              child: const Text(
                 ETexts.createAccount,
               ),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: ESizes.spaceBtwSections,
           ),
         ],

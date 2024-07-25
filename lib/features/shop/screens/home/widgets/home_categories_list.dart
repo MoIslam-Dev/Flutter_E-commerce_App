@@ -18,7 +18,7 @@ class CategoryList extends StatelessWidget {
         itemCount: 7,
         scrollDirection: Axis.horizontal,
         itemBuilder: (_, index){
-          return VerticalImageText(image: EImages.shoeIcon, title: 'what a car');
+          return const VerticalImageText(image: EImages.shoeIcon, title: 'what a car');
         }
       ),
     );

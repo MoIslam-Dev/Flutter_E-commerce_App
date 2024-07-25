@@ -21,7 +21,7 @@ final bool showBorder;
     return GestureDetector(
           child: ERoundedContainer(
             showBorder: showBorder,
-            padding: EdgeInsets.all(ESizes.sm),
+            padding: const EdgeInsets.all(ESizes.sm),
             backgroundColor:
                 EHelperFunctions.isDarkMode(context)
                     ? EColors.black
@@ -40,7 +40,7 @@ final bool showBorder;
                             : EColors.black,
                   ),
                 ),
-                SizedBox(width: ESizes.spaceBtwItems / 2),
+                const SizedBox(width: ESizes.spaceBtwItems / 2),
                 //Text
                 Flexible(
                   child: Column(
@@ -48,7 +48,7 @@ final bool showBorder;
                     crossAxisAlignment:
                         CrossAxisAlignment.start,
                     children: [
-                      EBrandTitleTextWithVerifiedIcon(
+                      const EBrandTitleTextWithVerifiedIcon(
                         title: 'Nike',
                         brandTextSize: TextSizes.medium,
                       ),

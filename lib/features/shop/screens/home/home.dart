@@ -22,7 +22,7 @@ class HomeScreen extends StatelessWidget {
         body: SingleChildScrollView(
       child: Column(
         children: [
-          EPrimaryHeaderContainer(
+          const EPrimaryHeaderContainer(
             child: Column(
               children: [
                 //AppBar
@@ -61,16 +61,18 @@ class HomeScreen extends StatelessWidget {
                       CategoryList(),
                     ],
                   ),
-                )
+                ),
+                   SizedBox(height: ESizes.spaceBtwSections,),
               ],
             ),
           ),
+       
           //body part in the home page
           Padding(
-              padding: EdgeInsets.all(ESizes.defaultSpace),
+              padding: const EdgeInsets.all(ESizes.defaultSpace),
               child: Column(
                 children: [
-                  PromoSlider(
+                  const PromoSlider(
                     banners: [
                       EImages.promoBanner1,
                       EImages.promoBanner2,
@@ -78,15 +80,15 @@ class HomeScreen extends StatelessWidget {
                     ],
                   ),
                   //Product section
-                  SectionHeading(
+                  const SectionHeading(
                     title: 'Popular Products ',
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: ESizes.spaceBtwItems,
                   ),
                   EGridLayout(
                       itemCount: 8,
-                      itemBuilder: (_, index) => EProductCardVertical())
+                      itemBuilder: (_, index) => const EProductCardVertical())
                 ],
               )),
         ],

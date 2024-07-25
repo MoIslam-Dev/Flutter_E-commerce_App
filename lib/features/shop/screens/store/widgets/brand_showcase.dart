@@ -20,13 +20,13 @@ class BrandShowCase extends StatelessWidget {
       borderColor: EColors.darkGrey,
       margin:
           const EdgeInsets.only(bottom: ESizes.spaceBtwItems),
-      padding: EdgeInsets.all(ESizes.md),
+      padding: const EdgeInsets.all(ESizes.md),
       child: Column(
         children: [
-          FeaturedBrandCard(
+          const FeaturedBrandCard(
             showBorder: false,
           ),
-          SizedBox(height: ESizes.spaceBtwItems),
+          const SizedBox(height: ESizes.spaceBtwItems),
           //3 brands
           Row(children: 
             images.map((image)=>brandTopProductsWidget(context, image)).toList()

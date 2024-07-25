@@ -21,7 +21,7 @@ class EProductCardVertical extends StatelessWidget {
     return GestureDetector(
       child: Container(
         width: 180,
-        padding: EdgeInsets.all(1),
+        padding: const EdgeInsets.all(1),
         decoration: BoxDecoration(
             boxShadow: [EShadowStyle.verticalProductShadow],
             borderRadius: BorderRadius.circular(ESizes.productImageRadius),
@@ -29,12 +29,12 @@ class EProductCardVertical extends StatelessWidget {
         child: Column(children: [
           ERoundedContainer(
             height: 180,
-            padding: EdgeInsets.all(ESizes.sm),
+            padding: const EdgeInsets.all(ESizes.sm),
             backgroundColor: dark ? EColors.dark : EColors.light,
             child: Stack(
               children: [
                 //image
-                ERoundedImage(
+                const ERoundedImage(
                   imageUrl: EImages.productImage1,
                   applyImageRadius: true,
                 ),
@@ -44,7 +44,7 @@ class EProductCardVertical extends StatelessWidget {
                   child: ERoundedContainer(
                       radius: ESizes.sm,
                       backgroundColor: EColors.secondary,
-                      padding: EdgeInsets.symmetric(
+                      padding: const EdgeInsets.symmetric(
                           horizontal: ESizes.sm, vertical: ESizes.xs),
                       child: Text('30%',
                           style: Theme.of(context)
@@ -53,7 +53,7 @@ class EProductCardVertical extends StatelessWidget {
                               .apply(color: EColors.black))),
                 ),
                 //heart icon
-                Positioned(
+                const Positioned(
                   top: 0,
                   right: 0,
                   child: CircularIcon(icon: Iconsax.heart5, color: Colors.red),
@@ -62,12 +62,12 @@ class EProductCardVertical extends StatelessWidget {
             ),
           ),
 
-          SizedBox(height: ESizes.spaceBtwItems / 2),
+          const SizedBox(height: ESizes.spaceBtwItems / 2),
 
           //Product Details
 
-          Padding(
-            padding: const EdgeInsets.only(left: ESizes.sm),
+          const Padding(
+            padding: EdgeInsets.only(left: ESizes.sm),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -82,27 +82,27 @@ class EProductCardVertical extends StatelessWidget {
               ],
             ),
           ),
-          Spacer(),
+          const Spacer(),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               //price
-              Padding(
-                padding: const EdgeInsets.only(left: ESizes.sm),
+              const Padding(
+                padding: EdgeInsets.only(left: ESizes.sm),
                 child: EProductPriceText(
                   price: '29000.99',
                 ),
               ),
               //Add To Cart Button
               Container(
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   color: EColors.dark,
                   borderRadius: BorderRadius.only(
                     topLeft: Radius.circular(ESizes.cardRadiusMd),
                     bottomRight: Radius.circular(ESizes.productImageRadius),
                   ),
                 ),
-                child: SizedBox(
+                child: const SizedBox(
                   height: ESizes.iconLg * 1.2,
                   width: ESizes.iconLg * 1.2,
                   child: Center(

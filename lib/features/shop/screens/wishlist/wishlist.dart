@@ -1,6 +1,5 @@
 
 import 'package:e_commerceapp/common/widgets/appbar/appbar.dart';
-import 'package:e_commerceapp/common/widgets/icons/circulaire_icon.dart';
 import 'package:e_commerceapp/common/widgets/layout/grid_layout.dart';
 import 'package:e_commerceapp/common/widgets/products/product_cards/product_card_vertical.dart';
 import 'package:e_commerceapp/utils/constants/sizes.dart';
@@ -19,7 +18,7 @@ class WishlistScreen extends StatelessWidget {
           style: Theme.of(context).textTheme.headlineMedium,
         ),
         actions: [
-          IconButton(icon: Icon(Iconsax.add), onPressed: () {  },)
+          IconButton(icon: const Icon(Iconsax.add), onPressed: () {  },)
         //CircularIcon(icon: Iconsax.add,)
         ],
         
@@ -28,11 +27,11 @@ class WishlistScreen extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Padding(padding: 
-        EdgeInsets.all(ESizes.defaultSpace),
+        const EdgeInsets.all(ESizes.defaultSpace),
       
       child: Column(
         children: [
-          EGridLayout(itemCount: 4, itemBuilder: (_, index) => EProductCardVertical(
+          EGridLayout(itemCount: 4, itemBuilder: (_, index) => const EProductCardVertical(
           )
           ),
         ],

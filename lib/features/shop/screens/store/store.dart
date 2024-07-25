@@ -11,7 +11,6 @@ import 'package:e_commerceapp/utils/constants/colors.dart';
 import 'package:e_commerceapp/utils/constants/sizes.dart';
 import 'package:e_commerceapp/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 
 class StoreScreen extends StatelessWidget {
@@ -41,31 +40,31 @@ class StoreScreen extends StatelessWidget {
                         : EColors.white,
                     expandedHeight: 448,
                     flexibleSpace: Padding(
-                      padding: EdgeInsets.all(ESizes.defaultSpace),
+                      padding: const EdgeInsets.all(ESizes.defaultSpace),
                       child: ListView(
                         shrinkWrap: true,
-                        physics: NeverScrollableScrollPhysics(),
+                        physics: const NeverScrollableScrollPhysics(),
                         children: [
                           //search bar
-                          SearchContainer(
+                          const SearchContainer(
                             text: 'Search',
                             showborder: true,
                             showbackground: true,
                             padding: EdgeInsets.symmetric(horizontal: 0),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: ESizes.spaceBtwSections,
                           ),
                           //featurs brand
-                          SectionHeading(
+                          const SectionHeading(
                             title: 'featured brands',
                           ),
-                          SizedBox(height: ESizes.spaceBtwItems / 1.5),
+                          const SizedBox(height: ESizes.spaceBtwItems / 1.5),
                           //featured brands
                           EGridLayout(
                               mainAxisExtent: 80,
                               itemCount: 4,
-                              itemBuilder: (_, index) => FeaturedBrandCard())
+                              itemBuilder: (_, index) => const FeaturedBrandCard())
                         ],
                       ),
                     ),
@@ -81,7 +80,7 @@ class StoreScreen extends StatelessWidget {
                     ))
               ];
             },
-            body: TabBarView(
+            body: const TabBarView(
               children: [
                 CategoryTab(),
                 CategoryTab(),

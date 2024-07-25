@@ -8,7 +8,7 @@ class EProductPriceText extends StatelessWidget {
 
   const EProductPriceText({
     super.key,
-    this.currencyString = "\DA",
+    this.currencyString = "DA",
     required this.price,
     this.maxLines = 1,
     this.isLarge = false,
